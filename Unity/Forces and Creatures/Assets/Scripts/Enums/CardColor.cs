@@ -6,5 +6,6 @@ public enum CardColor
     White,                  // Normal magic
     Red,                    // Equipment
     Brown,                  // Monster with effect
-    LightBrown              // Monster without effect
+    LightBrown,             // Monster without effect
+    Green                   // Permanent magic
 }

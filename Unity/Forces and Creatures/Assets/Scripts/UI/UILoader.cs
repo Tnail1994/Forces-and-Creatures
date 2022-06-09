@@ -11,6 +11,6 @@ public class UILoader : MonoBehaviour
                 SceneManager.LoadSceneAsync("UI", LoadSceneMode.Additive);
             else
                 SceneManager.UnloadSceneAsync("UI");
-        }       
+        }
     }
 }
