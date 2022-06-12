@@ -1,0 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SceneLoaderCallback : MonoBehaviour
+{
+    private bool _isFirstUpdate = false;
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (_isFirstUpdate)
+        {
+            _isFirstUpdate = false;
+            SceneLoader.LoaderCallback();
+        }
+    }
+}

@@ -1,16 +1,21 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class UILoader : MonoBehaviour
 {
-    private void Update()
+    private IUILoader _uiLoader = null;
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.F1))
+        _uiLoader = GetComponent<IUILoader>();
+
+        if (_uiLoader != null) return;
+
+        var uis = _uiLoader.GetUIs(transform);
+
+        foreach (Transform ui in uis)
         {
-            if (SceneManager.GetSceneByName("UI").isLoaded == false)
-                SceneManager.LoadSceneAsync("UI", LoadSceneMode.Additive);
-            else
-                SceneManager.UnloadSceneAsync("UI");
+            Debug.Log($"Getting UI: {ui.name}");
         }
     }
 }

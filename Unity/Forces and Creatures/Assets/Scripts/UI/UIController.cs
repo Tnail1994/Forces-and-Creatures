@@ -1,22 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class UIController : MonoBehaviour
+public class UIController
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private VersionUpdateControl _versionUpdateControl;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    private void OnDestroy()
-    {
+    public bool IsUpToDate { get; internal set; }
 
+    public void UpdateVersion()
+    {
+        if (_versionUpdateControl == null)
+            _versionUpdateControl = new VersionUpdateControl();
+
+        if (_versionUpdateControl.VersionIsLatestUpdate())
+        {
+            IsUpToDate = _versionUpdateControl.UpdateVersion();
+        }
     }
 }
