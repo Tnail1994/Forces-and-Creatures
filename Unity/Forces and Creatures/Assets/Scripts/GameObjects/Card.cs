@@ -1,7 +1,7 @@
 using Assets.Scripts.GameObjects;
 using UnityEngine;
 
-class Card : MonoBehaviour, ICard
+public class Card : MonoBehaviour, ICard
 {
     internal int _id;
     internal int _cost;

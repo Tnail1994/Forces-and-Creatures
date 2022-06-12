@@ -1,4 +1,4 @@
-class Resource : Card
+public class Resource : Card
 {
     private ResourceCategory _resourceCategory;       
 
