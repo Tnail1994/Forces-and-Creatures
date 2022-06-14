@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SceneLoaderCallback : MonoBehaviour
 {
-    private bool _isFirstUpdate = false;
+    private bool _isFirstUpdate = true;
 
     // Update is called once per frame
     void Update()

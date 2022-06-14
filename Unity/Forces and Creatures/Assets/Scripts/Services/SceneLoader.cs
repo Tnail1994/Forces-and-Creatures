@@ -1,14 +1,17 @@
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine.SceneManagement;
 
-public static class SceneLoader 
+public static class SceneLoader
 {
-  public enum Scene
+    public enum Scene
     {
         GameScene,
         LoadingScene,
         InGameUIScene,
-        MainMenuUIScene
+        MainMenuUIScene,
+        OfflineStandardScene
     }
 
     private static Action onLoaderCallback;
@@ -18,11 +21,11 @@ public static class SceneLoader
         // Set the loader callback action to load the target scene
         onLoaderCallback = () =>
         {
-            SceneManager.LoadScene(scene.ToString());
+            SceneManager.LoadSceneAsync(scene.ToString());
         };
 
-        // Load the loading scene
-        //SceneManager.LoadScene(Scene.LoadingScene.ToString());
+        //Load the loading scene
+        SceneManager.LoadScene(Scene.LoadingScene.ToString());
     }
 
     public static void LoaderCallback()
