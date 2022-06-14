@@ -1,5 +1,3 @@
-using Assets.Scripts.GameObjects;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +11,7 @@ public class CardTargetting : MonoBehaviour, ITargetGetter
 
         foreach (var card in cards)
         {
-            targets.Add(card.transform);
+            //targets.Add(card.transform);
         }
 
         return targets;

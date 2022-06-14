@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class TargetSystem : MonoBehaviour
@@ -8,7 +10,7 @@ public class TargetSystem : MonoBehaviour
     {
         _targetGetter = GetComponent<ITargetGetter>();
 
-        if (_targetGetter != null) return;
+        if (_targetGetter == null) return;
 
         var targets = _targetGetter.GetTargets(transform);
 

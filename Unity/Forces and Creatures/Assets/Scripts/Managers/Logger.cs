@@ -6,7 +6,7 @@ public class Logger : MonoBehaviour
     {
         var logable = GetComponent<Logable>();
 
-        if (logable != null) return;
+        if (logable == null) return;
 
         logable.DisplayText();
     }

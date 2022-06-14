@@ -1,23 +1,23 @@
-using Assets.Scripts.GameObjects;
 using UnityEngine;
 
-public class Card : MonoBehaviour, ICard
+public class Card
 {
-    internal int _id;
-    internal int _cost;
-    internal int _stars;
-    internal string _name;
-    internal string _description;
-    internal string _storyDescription;
-    internal CardColor _color;
+    public int Id { get; set; }
+    public int Cost { get; set; }
+    public int Stars { get; set; }
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public string StoryDescription { get; set; }
+    public CardColor Color { get; set; }
 
     public Card(int id, int cost, int stars, string name, string description,string storyDescription, CardColor color)
     {
-        _id = id;
-        _cost = cost;
-        _stars = stars;
-        _name = name;
-        _storyDescription = storyDescription;
-        _color = color;
+        Id = id;
+        Cost = cost;
+        Stars = stars;
+        Name = name;
+        Description = description;
+        StoryDescription = storyDescription;
+        Color = color;
     }
 }
