@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class GameComponentManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private GameObject _cardCreator;
+    private GameObject _targetSystem;
+    private GameObject _logger;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        _cardCreator = GameObject.Find(GameComponent.CardCreator.ToString());
+        _targetSystem = GameObject.Find(GameComponent.TargetSystem.ToString());
+        _logger = GameObject.Find(GameComponent.Logger.ToString());
     }
 }

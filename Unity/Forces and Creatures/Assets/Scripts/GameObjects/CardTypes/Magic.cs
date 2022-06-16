@@ -1,4 +1,4 @@
-class Magic : Card
+public class Magic : Card
 {
     public int ManaCosts { get; set; }
     public MagicCategory Category { get; set; }

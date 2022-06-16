@@ -21,8 +21,12 @@ public class CardCreator : MonoBehaviour
         {
             _cardDatabaseService.CreateCards();
             var x = _cardDatabaseService.GetAllCards().ToList();
+
+            var y = Instantiate(Prefab);
+            var y1 = y.GetComponentInChildren<CreatureObject>();
+            y1.Set((Creature)x[8]);
         }
 
-        var y = Instantiate(Prefab);
+    
     }
 }

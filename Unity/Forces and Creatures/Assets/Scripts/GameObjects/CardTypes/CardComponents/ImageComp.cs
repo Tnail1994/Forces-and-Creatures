@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ImageComp : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Image _image;
 
-    // Update is called once per frame
-    void Update()
+    public Sprite Sprite { get => _image.sprite; set => _image.sprite = value; }
+
+    private void Awake()
     {
-        
+        _image = GetComponent<Image>();
     }
 }
