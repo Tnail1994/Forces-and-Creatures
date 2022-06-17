@@ -23,6 +23,9 @@ public class CardCreator : MonoBehaviour
             var x = _cardDatabaseService.GetAllCards().ToList();
 
             var y = Instantiate(Prefab);
+
+            y.transform.SetParent(GameObject.Find("CardCanvas").transform, false);
+
             var y1 = y.GetComponentInChildren<CreatureObject>();
             y1.Set((Creature)x[8]);
         }

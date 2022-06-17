@@ -23,7 +23,7 @@ public class CreatureObject : MonoBehaviour
 
     public void Set(Creature creatureCard)
     {
-        _creatureCard = creatureCard;   
+        _creatureCard = creatureCard;
 
         switch (creatureCard.Category)
         {
@@ -39,7 +39,7 @@ public class CreatureObject : MonoBehaviour
     }
 
     #region Creating specific card
-  
+
     private void CreateCreatureEffectCard(Creature creatureCard)
     {
         SetBase(creatureCard);
@@ -83,19 +83,21 @@ public class CreatureObject : MonoBehaviour
 
     private void SetShellEffect(Creature creatureCard)
     {
-        SetShell($"[Kreatur, {creatureCard.Property}]:{creatureCard.Description}");
+        SetShell($"<b>[Kreatur, {creatureCard.Property}]:</b>{creatureCard.Description}");
     }
 
     private void SetShellNoneEffect(Creature creatureCard)
     {
-        SetShell($"[Kreatur, {creatureCard.Property}]:{creatureCard.StoryDescription}");
+        SetShell($"<b>[Kreatur, {creatureCard.Property}]:</b><i>{creatureCard.StoryDescription}</i>");
     }
 
     private void SetShell(string description)
     {
         var shellComp = _shell.GetComponent<ShellComp>();
+
         shellComp.Description = description;
     }
+
     private void SetBackgroundEffect(Creature creatureCard)
     {
         SetBackground(BackgroundImgName.CreatureEffectBackgroundObject_E1.ToString());
