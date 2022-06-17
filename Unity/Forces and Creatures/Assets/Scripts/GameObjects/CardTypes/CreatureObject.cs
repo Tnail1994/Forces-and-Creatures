@@ -15,10 +15,10 @@ public class CreatureObject : MonoBehaviour
 
     private void Awake()
     {
-        _header = GameObject.Find(CardObjects.Header.ToString());
-        _image = GameObject.Find(CardObjects.Image.ToString());
-        _shell = GameObject.Find(CardObjects.Shell.ToString());
-        _attributes = GameObject.Find(CardObjects.Attributes.ToString());
+        _header = GetComponentInChildren<HeaderComp>().gameObject;
+        _image = GetComponentInChildren<ImageComp>().gameObject;
+        _shell = GetComponentInChildren<ShellComp>().gameObject;
+        _attributes = GetComponentInChildren<AttributesComp>().gameObject;
     }
 
     public void Set(Creature creatureCard)

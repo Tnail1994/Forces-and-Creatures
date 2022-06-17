@@ -1,24 +1,24 @@
 public enum CreatureCategory
 {
     Effect,
-    NoneEffect    
+    NoneEffect,  
 }
 
 public enum ResourceCategory
 {
     Gold,
-    Mana
+    Mana,
 }
 
 public enum EquipmentCategory
 {
     Attackpoint,
-    Lifepoint
+    Lifepoint,
 }
 
 public enum MagicCategory
 {
     Normal,
     Permanent,
-    Reaction
+    Reaction,
 }

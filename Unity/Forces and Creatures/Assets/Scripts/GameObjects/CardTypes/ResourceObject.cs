@@ -14,9 +14,9 @@ public class ResourceObject : MonoBehaviour
 
     private void Awake()
     {
-        _header = GameObject.Find(CardObjects.Header.ToString());
-        _image = GameObject.Find(CardObjects.Image.ToString());
-        _shell = GameObject.Find(CardObjects.Shell.ToString());
+        _header = GetComponentInChildren<HeaderComp>().gameObject;
+        _image = GetComponentInChildren<ImageComp>().gameObject;
+        _shell = GetComponentInChildren<ShellComp>().gameObject;
     }
     public void Set(Resource resourceCard)
     {
@@ -38,7 +38,6 @@ public class ResourceObject : MonoBehaviour
     {
         SetBase(resourceCard);
         SetBackgroundMana(resourceCard);
-
     }
 
     private void CreateGoldCard(Resource resourceCard)

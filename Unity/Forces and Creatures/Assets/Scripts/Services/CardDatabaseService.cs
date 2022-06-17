@@ -30,8 +30,6 @@ public class CardDatabaseService : ICardDatabaseService
         CreateMagicCards();
 
         CardsCreated = true;
-        //string json = JsonConvert.SerializeObject(_cards.Data, new Newtonsoft.Json.Converters.StringEnumConverter());
-        //File.WriteAllText(@"C:\Users\Stefan\Documents\GitHub\Forces-and-Creatures\Data\Cards\cards.json", json);
     }
     private void CreateResourceCards()
     {
@@ -61,7 +59,15 @@ public class CardDatabaseService : ICardDatabaseService
 
     public Card GetCardByName(string name)
     {
-        throw new System.NotImplementedException();
+        foreach (var card in GetAllCards())
+        {
+            if (card.Name == name)
+            {
+                return card;
+            }
+        }
+
+        return null;
     }
 
     public Card GetCardById(int id)

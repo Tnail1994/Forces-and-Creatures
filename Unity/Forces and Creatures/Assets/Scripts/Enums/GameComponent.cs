@@ -1,6 +1,7 @@
-public enum GameComponent 
+public enum GameComponent
 {
-   CardCreator,
-   TargetSystem,
-   Logger
+    CardCreator,
+    TargetSystem,
+    Logger,
+    DeckCreator
 }

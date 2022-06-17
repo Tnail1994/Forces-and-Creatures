@@ -15,10 +15,10 @@ public class MagicObject : MonoBehaviour
 
     private void Awake()
     {
-        _header = GameObject.Find(CardObjects.Header.ToString());
-        _image = GameObject.Find(CardObjects.Image.ToString());
-        _shell = GameObject.Find(CardObjects.Shell.ToString());
-        _attribute = GameObject.Find(CardObjects.Attributes.ToString());
+        _header = GetComponentInChildren<HeaderComp>().gameObject;
+        _image = GetComponentInChildren<ImageComp>().gameObject;
+        _shell = GetComponentInChildren<ShellComp>().gameObject;
+        _attribute = GetComponentInChildren<ManaAttributeComp>().gameObject;
     }
     public void Set(Magic magicCard)
     {
