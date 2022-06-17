@@ -7,9 +7,11 @@ public class DeckCreator : MonoBehaviour
 {
     private CardCreator _cardCreator;
 
+    public Action StarterDecksCreated { get; set; }
+
     private void Awake()
     {
-        _cardCreator = 
+        _cardCreator =
             GameObject.Find(GameComponent.CardCreator.ToString())
             .GetComponent<CardCreator>();
     }
@@ -18,7 +20,7 @@ public class DeckCreator : MonoBehaviour
     {
         if (_cardCreator == null) return;
 
-        _cardCreator.AllCardsInstatiated += InstantiateStarterDecks;
+        InstantiateStarterDecks();
     }
 
     public void InstantiateStarterDecks()
@@ -48,5 +50,7 @@ public class DeckCreator : MonoBehaviour
         _cardCreator.InstatiateCopy("Kleine Manaessenz", "Player2");
         _cardCreator.InstatiateCopy("Schutzsphäre", "Player2");
         _cardCreator.InstatiateCopy("Schutzsphäre", "Player2");
+
+        StarterDecksCreated?.Invoke();
     }
 }

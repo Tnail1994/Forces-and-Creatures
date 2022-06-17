@@ -14,8 +14,6 @@ public class CardCreator : MonoBehaviour
 
     private Dictionary<string, GameObject> _allCardsDictionary;
 
-    public Action AllCardsInstatiated { get; internal set; }
-
     private void Awake()
     {
         _cardDatabaseService = new CardDatabaseService();
@@ -30,19 +28,15 @@ public class CardCreator : MonoBehaviour
 
         foreach (var card in _cardDatabaseService.GetAllCards())
         {
-            _allCardsDictionary.Add(card.Name, InstantiateCard(card, "AllCards"));
+            var cardObj = InstantiateCard(card, "AllCards");
+            cardObj.name = card.Name;
+            _allCardsDictionary.Add(card.Name, cardObj);
         }
     }
 
 
     private void Start()
     {
-        if (_cardDatabaseService == null) return;
-
-        if (_cardDatabaseService.CardsCreated)
-        {
-            AllCardsInstatiated?.Invoke();
-        }
     }
 
     public GameObject InstantiateCard(string cardName, string position)
@@ -130,5 +124,6 @@ public class CardCreator : MonoBehaviour
     {
         var cardCopy = Instantiate(_allCardsDictionary[cardName]);
         cardCopy.transform.SetParent(GameObject.Find(position).transform, false);
+        cardCopy.tag = $"{position}_Deck";
     }
 }
