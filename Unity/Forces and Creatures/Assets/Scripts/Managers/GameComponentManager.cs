@@ -8,6 +8,7 @@ public class GameComponentManager : MonoBehaviour
     private GameObject _targetSystem;
     private GameObject _logger;
     private GameObject _deckCreator;
+    private GameObject _shuffleSystem;
 
     private void Awake()
     {
@@ -15,6 +16,7 @@ public class GameComponentManager : MonoBehaviour
         _targetSystem = GameObject.Find(GameComponent.TargetSystem.ToString());
         _logger = GameObject.Find(GameComponent.Logger.ToString());
         _deckCreator = GameObject.Find(GameComponent.DeckCreator.ToString());
+        _shuffleSystem = GameObject.Find(GameComponent.ShuffleSystem.ToString());
     }
 
     private void Start()

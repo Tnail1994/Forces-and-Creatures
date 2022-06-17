@@ -4,11 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CreatureObject : MonoBehaviour
+public class CreatureObject : CardObject
 {
-    private GameObject _header;
-    private GameObject _image;
-    private GameObject _shell;
     private GameObject _attributes;
 
     private Creature _creatureCard;
@@ -19,6 +16,8 @@ public class CreatureObject : MonoBehaviour
         _image = GetComponentInChildren<ImageComp>().gameObject;
         _shell = GetComponentInChildren<ShellComp>().gameObject;
         _attributes = GetComponentInChildren<AttributesComp>().gameObject;
+        _backSide = GetComponentInChildren<BackSideComp>().gameObject;
+        _backSide.GetComponent<Image>().enabled = false;
     }
 
     public void Set(Creature creatureCard)

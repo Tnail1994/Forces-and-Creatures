@@ -3,5 +3,6 @@ public enum GameComponent
     CardCreator,
     TargetSystem,
     Logger,
-    DeckCreator
+    DeckCreator,
+    ShuffleSystem
 }

@@ -4,11 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EquipmentObject : MonoBehaviour
+public class EquipmentObject : CardObject
 {
-    private GameObject _header;
-    private GameObject _image;
-    private GameObject _shell;
     private GameObject _attribute;
 
     public Equipment EquipmentCard { get; set; }
@@ -19,6 +16,8 @@ public class EquipmentObject : MonoBehaviour
         _image = GetComponentInChildren<ImageComp>().gameObject;
         _shell = GetComponentInChildren<ShellComp>().gameObject;
         _attribute = GetComponentInChildren<AttackpointsAttributeComp>().gameObject;
+        _backSide = GetComponentInChildren<BackSideComp>().gameObject;
+        _backSide.GetComponent<Image>().enabled = false;
     }
     public void Set(Equipment equipmentCard)
     {

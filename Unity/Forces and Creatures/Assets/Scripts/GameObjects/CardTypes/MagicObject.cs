@@ -4,11 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MagicObject : MonoBehaviour
+public class MagicObject : CardObject
 {
-    private GameObject _header;
-    private GameObject _image;
-    private GameObject _shell;
     private GameObject _attribute;
 
     public Magic MagicCard { get; set; }
@@ -19,7 +16,10 @@ public class MagicObject : MonoBehaviour
         _image = GetComponentInChildren<ImageComp>().gameObject;
         _shell = GetComponentInChildren<ShellComp>().gameObject;
         _attribute = GetComponentInChildren<ManaAttributeComp>().gameObject;
+        _backSide = GetComponentInChildren<BackSideComp>().gameObject;
+        _backSide.GetComponent<Image>().enabled = false;
     }
+
     public void Set(Magic magicCard)
     {
         switch (magicCard.Category)

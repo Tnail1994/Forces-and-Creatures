@@ -4,12 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ResourceObject : MonoBehaviour
+public class ResourceObject : CardObject
 {
-    private GameObject _header;
-    private GameObject _image;
-    private GameObject _shell;
-
     public Resource ResourceCard { get; set; }
 
     private void Awake()
@@ -17,6 +13,8 @@ public class ResourceObject : MonoBehaviour
         _header = GetComponentInChildren<HeaderComp>().gameObject;
         _image = GetComponentInChildren<ImageComp>().gameObject;
         _shell = GetComponentInChildren<ShellComp>().gameObject;
+        _backSide = GetComponentInChildren<BackSideComp>().gameObject;
+        _backSide.GetComponent<Image>().enabled = false;
     }
     public void Set(Resource resourceCard)
     {
