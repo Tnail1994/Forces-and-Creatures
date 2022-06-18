@@ -31,4 +31,6 @@ public class PlayerDeck : MonoBehaviour
         _deck = _gameComponentManager.FlipControl.FlipDeck(_deck);
         _deck = _gameComponentManager.SizeControl.RescaleGameObjects(_deck, SCALE_FACTOR_DECK);
     }
+
+    public List<GameObject> Deck { get => _deck; }
 }
