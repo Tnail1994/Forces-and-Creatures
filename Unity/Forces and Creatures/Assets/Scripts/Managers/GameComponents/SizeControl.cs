@@ -21,4 +21,18 @@ public class SizeControl : MonoBehaviour
 
         return rescaledGameObject;
     }
+
+    internal GameObject SetWidthOfGameObject(GameObject gameObject, float width)
+    {
+        var rectTransform = gameObject.GetComponent<RectTransform>();
+        rectTransform.sizeDelta = new Vector2(width, rectTransform.sizeDelta.y);
+        return gameObject;
+    }  
+    
+    internal GameObject SetHeigthOfGameObject(GameObject gameObject, float heigth)
+    {
+        var rectTransform = gameObject.GetComponent<RectTransform>();
+        rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, heigth);
+        return gameObject;
+    }
 }

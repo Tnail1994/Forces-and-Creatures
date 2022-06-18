@@ -33,10 +33,12 @@ public class DeckField : MonoBehaviour
         var hand = _boardComponentManager.PlayerHand.Hand;
 
         var scaleFactor = _boardComponentManager.PlayerHand.SCALE_FACTOR_HAND;
+        var cardWidth = _boardComponentManager.PlayerHand.CARD_WIDTH;
 
         var cardOnTopObject = deck.Last();
-        cardOnTopObject.transform.SetParent(GameObject.Find(BoardComponent.PlayerHand.ToString()).transform, false);
         cardOnTopObject = _gameComponentManager.SizeControl.RescaleGameObject(cardOnTopObject, scaleFactor);
+        cardOnTopObject = _gameComponentManager.SizeControl.SetWidthOfGameObject(cardOnTopObject, cardWidth);
+        cardOnTopObject.transform.SetParent(GameObject.Find(BoardComponent.PlayerHand.ToString()).transform, false);
 
         var cardOnTop = cardOnTopObject.GetComponent<CardObject>();
         var backIsVisible = cardOnTop.BackIsVisible;

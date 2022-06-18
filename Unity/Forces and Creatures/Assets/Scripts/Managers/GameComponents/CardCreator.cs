@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class CardCreator : MonoBehaviour
 {
+    private GameObject _gameComponentManagerObject;
+    private GameComponentManager _gameComponentManager;
+
     private ICardDatabaseService _cardDatabaseService = null;
 
     private GameObject _prefabCreature;
@@ -16,6 +19,9 @@ public class CardCreator : MonoBehaviour
 
     private void Awake()
     {
+        _gameComponentManagerObject = GameObject.Find("GameComponentManager");
+        _gameComponentManager = _gameComponentManagerObject.GetComponent<GameComponentManager>();
+
         _cardDatabaseService = new CardDatabaseService();
         _allCardsDictionary = new Dictionary<string, GameObject>();
 

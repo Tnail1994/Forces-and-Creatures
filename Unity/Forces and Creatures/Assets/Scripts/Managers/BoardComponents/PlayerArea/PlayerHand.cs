@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerHand : MonoBehaviour
 {
     internal float SCALE_FACTOR_HAND = 0.375f;
+    internal float CARD_WIDTH = 222;
 
     private List<GameObject> _hand;
 

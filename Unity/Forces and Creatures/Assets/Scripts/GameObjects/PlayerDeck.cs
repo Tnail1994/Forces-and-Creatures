@@ -19,12 +19,12 @@ public class PlayerDeck : MonoBehaviour
         _gameComponentManagerObject = GameObject.Find("GameComponentManager");
         _gameComponentManager = _gameComponentManagerObject.GetComponent<GameComponentManager>();
 
-        _gameComponentManager.DeckCreator.StarterDecksCreated += CreateDeckDictionary;
+        _gameComponentManager.DeckCreator.StarterDecksCreated += CreateDeckList;
 
         _deck = new List<GameObject>();
     }
 
-    private void CreateDeckDictionary()
+    private void CreateDeckList()
     {
         _deck = GameObject.FindGameObjectsWithTag($"{name}").ToList();
         _deck = _gameComponentManager.ShuffleSystem.Shuffle(_deck);
