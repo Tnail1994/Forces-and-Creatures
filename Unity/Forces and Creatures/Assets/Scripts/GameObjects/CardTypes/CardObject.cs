@@ -23,7 +23,7 @@ public class CardObject : MonoBehaviour
         }
     }
 
-    private void FlipCard()
+    internal void FlipCard()
     {
         _backSide.GetComponent<Image>().enabled = BackIsVisible;
         _image.GetComponent<Image>().enabled = !BackIsVisible;

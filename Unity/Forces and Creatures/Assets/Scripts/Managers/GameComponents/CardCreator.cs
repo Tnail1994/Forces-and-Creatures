@@ -124,6 +124,6 @@ public class CardCreator : MonoBehaviour
     {
         var cardCopy = Instantiate(_allCardsDictionary[cardName]);
         cardCopy.transform.SetParent(GameObject.Find(position).transform, false);
-        cardCopy.tag = $"{position}_Deck";
+        cardCopy.tag = $"{position}";
     }
 }

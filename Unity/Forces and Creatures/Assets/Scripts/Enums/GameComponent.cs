@@ -4,5 +4,7 @@ public enum GameComponent
     TargetSystem,
     Logger,
     DeckCreator,
-    ShuffleSystem
+    ShuffleSystem,
+    SizeControl,
+    FlipControl
 }

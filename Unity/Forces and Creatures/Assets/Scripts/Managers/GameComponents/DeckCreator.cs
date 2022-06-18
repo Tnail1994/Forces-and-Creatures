@@ -25,31 +25,31 @@ public class DeckCreator : MonoBehaviour
 
     public void InstantiateStarterDecks()
     {
-        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player1");
-        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player1");
-        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player1");
-        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player1");
-        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player1");
-        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player1");
-        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player1");
-        _cardCreator.InstatiateCopy("Kleine Manaessenz", "Player1");
-        _cardCreator.InstatiateCopy("Kleine Manaessenz", "Player1");
-        _cardCreator.InstatiateCopy("Kleine Manaessenz", "Player1");
-        _cardCreator.InstatiateCopy("Schutzsphäre", "Player1");
-        _cardCreator.InstatiateCopy("Schutzsphäre", "Player1");
+        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player1_Deck");
+        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player1_Deck");
+        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player1_Deck");
+        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player1_Deck");
+        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player1_Deck");
+        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player1_Deck");
+        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player1_Deck");
+        _cardCreator.InstatiateCopy("Kleine Manaessenz", "Player1_Deck");
+        _cardCreator.InstatiateCopy("Kleine Manaessenz", "Player1_Deck");
+        _cardCreator.InstatiateCopy("Kleine Manaessenz", "Player1_Deck");
+        _cardCreator.InstatiateCopy("Schutzsphäre", "Player1_Deck");
+        _cardCreator.InstatiateCopy("Schutzsphäre", "Player1_Deck");
 
-        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player2");
-        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player2");
-        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player2");
-        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player2");
-        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player2");
-        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player2");
-        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player2");
-        _cardCreator.InstatiateCopy("Kleine Manaessenz", "Player2");
-        _cardCreator.InstatiateCopy("Kleine Manaessenz", "Player2");
-        _cardCreator.InstatiateCopy("Kleine Manaessenz", "Player2");
-        _cardCreator.InstatiateCopy("Schutzsphäre", "Player2");
-        _cardCreator.InstatiateCopy("Schutzsphäre", "Player2");
+        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player2_Deck");
+        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player2_Deck");
+        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player2_Deck");
+        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player2_Deck");
+        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player2_Deck");
+        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player2_Deck");
+        _cardCreator.InstatiateCopy("Ein wenig Gold", "Player2_Deck");
+        _cardCreator.InstatiateCopy("Kleine Manaessenz", "Player2_Deck");
+        _cardCreator.InstatiateCopy("Kleine Manaessenz", "Player2_Deck");
+        _cardCreator.InstatiateCopy("Kleine Manaessenz", "Player2_Deck");
+        _cardCreator.InstatiateCopy("Schutzsphäre", "Player2_Deck");
+        _cardCreator.InstatiateCopy("Schutzsphäre", "Player2_Deck");
 
         StarterDecksCreated?.Invoke();
     }
