@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CardObject : MonoBehaviour
+public class CardObject : MonoBehaviour, IClickBehaviour
 {
     internal GameObject _header;
     internal GameObject _image;
@@ -29,4 +29,15 @@ public class CardObject : MonoBehaviour
         _image.GetComponent<Image>().enabled = !BackIsVisible;
     }
 
+    public void Click()
+    {
+        if (this.gameObject.layer != (int)LayerNumber.IgnoreRaycast)
+            Debug.Log($"You are clicking {this.name}");
+    }
+
+    public void Highlight()
+    {
+        if (this.gameObject.layer != (int)LayerNumber.IgnoreRaycast)
+            Debug.Log($"You are over {this.name}");
+    }
 }

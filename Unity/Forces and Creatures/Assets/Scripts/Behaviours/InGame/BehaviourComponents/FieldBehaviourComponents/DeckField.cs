@@ -5,7 +5,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DeckField : MonoBehaviour
+public class DeckField : MonoBehaviour, IClickBehaviour
 {
     private GameObject _boardComponentManagerObject;
     private BoardComponentManager _boardComponentManager;
@@ -15,6 +15,8 @@ public class DeckField : MonoBehaviour
 
     private Button _deckButton;
 
+  
+
     private void Awake()
     {
         _boardComponentManagerObject = GameObject.Find("Board");
@@ -23,11 +25,9 @@ public class DeckField : MonoBehaviour
         _gameComponentManagerObject = GameObject.Find("GameComponentManager");
         _gameComponentManager = _gameComponentManagerObject.GetComponent<GameComponentManager>();
 
-        _deckButton = GetComponent<Button>();
-        _deckButton.onClick.AddListener(OnDeckClicked);
     }
-
-    private void OnDeckClicked()
+  
+    public void Click()
     {
         var deck = _boardComponentManager.Player1_Deck.Deck;
         var hand = _boardComponentManager.PlayerHand.Hand;
@@ -39,14 +39,20 @@ public class DeckField : MonoBehaviour
         cardOnTopObject = _gameComponentManager.SizeControl.RescaleGameObject(cardOnTopObject, scaleFactor);
         cardOnTopObject = _gameComponentManager.SizeControl.SetWidthOfGameObject(cardOnTopObject, cardWidth);
         cardOnTopObject.transform.SetParent(GameObject.Find(BoardComponent.PlayerHand.ToString()).transform, false);
+        cardOnTopObject.layer = (int)LayerNumber.UI;
 
         var cardOnTop = cardOnTopObject.GetComponent<CardObject>();
         var backIsVisible = cardOnTop.BackIsVisible;
         cardOnTop.BackIsVisible = !backIsVisible;
         cardOnTop.FlipCard();
-        
-        deck.RemoveAt(deck.Count-1);
 
         hand.Add(deck.Last());
+        deck.RemoveAt(deck.Count - 1);
+
+    }
+
+    public void Highlight()
+    {
+        Debug.Log("Hightlight Execute");
     }
 }

@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DeckCreator : MonoBehaviour
@@ -8,7 +5,7 @@ public class DeckCreator : MonoBehaviour
     private GameObject _gameComponentManagerObject;
     private GameComponentManager _gameComponentManager;
 
-    public Action StarterDecksCreated { get; set; }
+    public System.Action StarterDecksCreated { get; set; }
 
     private void Awake()
     {

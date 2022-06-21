@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3070549342041911408}
   - component: {fileID: 8912903393231847507}
   - component: {fileID: 1898317017385652777}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Lifepoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 3422348487379212579}
   - component: {fileID: 340271235144558794}
   - component: {fileID: 7059130516758051062}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Star3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 7182459321626867953}
   - component: {fileID: 6817124771326799340}
   - component: {fileID: 7074690450170939672}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 5792777490312025641}
   - component: {fileID: 2654356052223261550}
   - component: {fileID: 6387490666119384495}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Star5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 2277793024685018212}
   - component: {fileID: 9131062168601812202}
   - component: {fileID: 9002462825933341}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Value
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 4001401499173721962}
   - component: {fileID: 2115457637759396303}
   - component: {fileID: 7859860927545555766}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Star4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -515,7 +515,7 @@ GameObject:
   - component: {fileID: 1617604975134653623}
   - component: {fileID: 1617604975134653513}
   - component: {fileID: 1617604975134653622}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Costs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -596,7 +596,7 @@ GameObject:
   - component: {fileID: 1617604976793940575}
   - component: {fileID: 1617604976793940572}
   - component: {fileID: 1617604976793940573}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: BackSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -684,7 +684,7 @@ GameObject:
   - component: {fileID: 3132209964169620421}
   - component: {fileID: 1910390661139575611}
   - component: {fileID: 6804269023995474956}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Attributes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -749,7 +749,7 @@ GameObject:
   - component: {fileID: 5321312826948446747}
   - component: {fileID: 2784204153685674696}
   - component: {fileID: 2536416384334711403}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Star6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -837,7 +837,7 @@ GameObject:
   - component: {fileID: 4613730981357434337}
   - component: {fileID: 5576078267671191593}
   - component: {fileID: 5948365677545435643}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: EffectText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -918,7 +918,7 @@ GameObject:
   - component: {fileID: 4772954954829971818}
   - component: {fileID: 3459046317624715419}
   - component: {fileID: 2489353506877871902}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Star1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1007,7 +1007,7 @@ GameObject:
   - component: {fileID: 3695668897720462155}
   - component: {fileID: 3445695640544987321}
   - component: {fileID: 2664440809529769292}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Header
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1099,7 +1099,7 @@ GameObject:
   - component: {fileID: 2311440283990607124}
   - component: {fileID: 8336324338103173951}
   - component: {fileID: 7967883986855783809}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Shell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1186,7 +1186,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7045395620273655025}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Stars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1232,7 +1232,7 @@ GameObject:
   - component: {fileID: 6356193457491797878}
   - component: {fileID: 8704992538737208724}
   - component: {fileID: 3910971370248824883}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: EquipmentCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1341,7 +1341,7 @@ GameObject:
   - component: {fileID: 1901749489407194072}
   - component: {fileID: 2416667367828530068}
   - component: {fileID: 1092517649443935978}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1429,7 +1429,7 @@ GameObject:
   - component: {fileID: 6460915616639248740}
   - component: {fileID: 3002506529517680402}
   - component: {fileID: 5256993800093103446}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Value
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1509,7 +1509,7 @@ GameObject:
   - component: {fileID: 1969101277754907128}
   - component: {fileID: 7595089800952594112}
   - component: {fileID: 8695251855895774573}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Attackpoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1587,7 +1587,7 @@ GameObject:
   - component: {fileID: 4199254020759319552}
   - component: {fileID: 8552329208688665125}
   - component: {fileID: 6996647492080027875}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Star2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
