@@ -5,17 +5,21 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DeckField : MonoBehaviour, IClickBehaviour
+public class DeckField : MonoBehaviour, ICardPlacementBehaviour
 {
+    #region Constans
+    private Color HIGHLIGHT_COLOR = new(255f, 215f, 0f, 61f);
+    private Color DEFAULT_COLOR = new(255f, 215f, 0f, 0f);
+    #endregion
+
     private GameObject _boardComponentManagerObject;
     private BoardComponentManager _boardComponentManager;
 
     private GameObject _gameComponentManagerObject;
     private GameComponentManager _gameComponentManager;
 
-    private Button _deckButton;
-
-  
+    private Outline _outline;
+    private Image _image;
 
     private void Awake()
     {
@@ -25,9 +29,11 @@ public class DeckField : MonoBehaviour, IClickBehaviour
         _gameComponentManagerObject = GameObject.Find("GameComponentManager");
         _gameComponentManager = _gameComponentManagerObject.GetComponent<GameComponentManager>();
 
+        _outline = GetComponentInChildren<Outline>();
+        _image = GetComponentInChildren<Image>();
     }
-  
-    public void Click()
+
+    public void OnClick(CardObject cardObject)
     {
         var deck = _boardComponentManager.Player1_Deck.Deck;
         var hand = _boardComponentManager.PlayerHand.Hand;
@@ -48,11 +54,17 @@ public class DeckField : MonoBehaviour, IClickBehaviour
 
         hand.Add(deck.Last());
         deck.RemoveAt(deck.Count - 1);
-
     }
 
-    public void Highlight()
+    public void OnHighlight(CardObject cardObject)
     {
-        Debug.Log("Hightlight Execute");
+        _outline.enabled = true;
+        _image.enabled = true;
+    }
+
+    public void OnRemoveHighlight(CardObject cardObject)
+    {
+        _outline.enabled = false;
+        _image.enabled = false;
     }
 }

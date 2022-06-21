@@ -114,4 +114,9 @@ public class CreatureObject : CardObject
 
 
     #endregion
+
+    #region Behaviours
+   
+    #endregion
+
 }

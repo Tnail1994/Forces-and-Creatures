@@ -19,10 +19,10 @@ public class MouseOverDetection : CustomAction
         {
             IClickBehaviour c = r.gameObject.GetComponent<IClickBehaviour>();
             if (c != null)
-            {
+            {                
                 c.Highlight();
                 break;
-            }
+            }            
         }
     }
 

@@ -84,4 +84,5 @@ public class ResourceObject : CardObject
         backgroundComp.sprite = Resources.Load<Sprite>("Imgs/Objects/Backgrounds/" + imgName);
     }
     #endregion
+
 }
