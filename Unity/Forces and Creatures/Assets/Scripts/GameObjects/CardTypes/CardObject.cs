@@ -62,5 +62,5 @@ public class CardObject : MonoBehaviour, IClickBehaviour
     {
         _currentCardPlacementBehaviour = GetComponentInParent<ICardPlacementBehaviour>();
         _currentCardPlacementBehaviour.OnRemoveHighlight(this);
-    }
+    }   
 }

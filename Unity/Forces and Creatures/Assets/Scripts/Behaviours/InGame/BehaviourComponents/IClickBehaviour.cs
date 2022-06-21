@@ -6,6 +6,5 @@ public interface IClickBehaviour
 {
     void Click();
     void Highlight();
-
     void RemoveHighlight();
 }

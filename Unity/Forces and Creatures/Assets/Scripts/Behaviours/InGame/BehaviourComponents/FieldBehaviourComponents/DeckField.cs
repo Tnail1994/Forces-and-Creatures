@@ -7,11 +7,6 @@ using UnityEngine.UI;
 
 public class DeckField : MonoBehaviour, ICardPlacementBehaviour
 {
-    #region Constans
-    private Color HIGHLIGHT_COLOR = new(255f, 215f, 0f, 61f);
-    private Color DEFAULT_COLOR = new(255f, 215f, 0f, 0f);
-    #endregion
-
     private GameObject _boardComponentManagerObject;
     private BoardComponentManager _boardComponentManager;
 
@@ -66,5 +61,5 @@ public class DeckField : MonoBehaviour, ICardPlacementBehaviour
     {
         _outline.enabled = false;
         _image.enabled = false;
-    }
+    } 
 }
