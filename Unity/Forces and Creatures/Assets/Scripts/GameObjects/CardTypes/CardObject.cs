@@ -44,13 +44,13 @@ public class CardObject : MonoBehaviour, IClickBehaviour
     public virtual void Click()
     {
         _currentCardPlacementBehaviour = GetComponentInParent<ICardPlacementBehaviour>();
-        _currentCardPlacementBehaviour.OnClick(this);
+        _currentCardPlacementBehaviour?.OnClick(this);
     }
 
     public virtual void Highlight()
     {
         _currentCardPlacementBehaviour = GetComponentInParent<ICardPlacementBehaviour>();
-        _currentCardPlacementBehaviour.OnHighlight(this);       
+        _currentCardPlacementBehaviour?.OnHighlight(this);       
     }
 
     public void OnMouseExit()
@@ -61,6 +61,6 @@ public class CardObject : MonoBehaviour, IClickBehaviour
     public void RemoveHighlight()
     {
         _currentCardPlacementBehaviour = GetComponentInParent<ICardPlacementBehaviour>();
-        _currentCardPlacementBehaviour.OnRemoveHighlight(this);
+        _currentCardPlacementBehaviour?.OnRemoveHighlight(this);
     }   
 }
